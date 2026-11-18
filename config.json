@@ -1,0 +1,22 @@
+{
+  "business_name": "Sunrise Clinic",
+  "business_phone": "+91 00000 00000",
+  "default_country_code": "91",
+  "channels": ["console"],
+  "offsets": [
+    {"name": "day_before", "minutes_before": 1440},
+    {"name": "two_hours", "minutes_before": 120}
+  ],
+  "quiet_hours": {"start": "21:00", "end": "08:00"},
+  "min_notice_minutes": 10,
+  "whatsapp": {
+    "template": "",
+    "language": "en",
+    "template_params": ["first_name", "service", "date", "time"]
+  },
+  "templates": {
+    "day_before": "Hi $first_name, a reminder from $business: your $service is $when at $time. Reply or call $phone if you need to reschedule.",
+    "two_hours": "Hi $first_name, see you at $time today for your $service at $business. Running late? Call $phone.",
+    "default": "Hi $first_name, a reminder of your $service at $business on $date at $time."
+  }
+}
